@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">ComposeClock</string>
+    <string name="cancel_button">Cancel</string>
+    <!--Alarm-->
+        <!--Turn Off Repetition Alarm Dialog-->
+    <string name="repetition_alarm_deactivation_dialog_title">Select</string>
+    <string name="repetition_alarm_deactivation_dialog_one_time_deactivation">Turn off once on %s</string>
+    <string name="repetition_alarm_deactivation_dialog_total_deactivation">Turn off this repeating alarm</string>
 </resources>
