@@ -14,6 +14,7 @@ import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.text.TextMeasurer
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.drawText
+import androidx.compose.ui.text.rememberTextMeasurer
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.toSize
 
@@ -25,14 +26,14 @@ private val extraTextWidth = 4.dp
  * @param modifier The modifier to be applied to the component. Default is Modifier.
  * @param time A lambda that returns the time string to be displayed.
  * @param textStyle The style to be applied to the text. Default is LocalTextStyle.current.
- * @param textMeasurer The TextMeasurer instance used for measuring text size.
+ * @param textMeasurer The TextMeasurer instance used for measuring text size. Default is a remembered instance.
  */
 @Composable
 fun ClockText(
     modifier: Modifier = Modifier,
     time: () -> String,
     textStyle: TextStyle = LocalTextStyle.current,
-    textMeasurer: TextMeasurer
+    textMeasurer: TextMeasurer = rememberTextMeasurer()
 ) {
     // Get the current content color and density from the composition's context
     val textColor = LocalContentColor.current
