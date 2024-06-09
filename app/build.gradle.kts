@@ -69,4 +69,8 @@ dependencies {
 
     //Constraint
     implementation(libs.androidx.constraintlayout.compose)
+
+    //Multipickers
+    implementation (libs.multipickers)
+
 }
