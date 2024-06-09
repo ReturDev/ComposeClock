@@ -1,4 +1,4 @@
-package com.retur.composeclock.ui.core.composable.checkbox
+package com.retur.composeclock.ui.core.composable.clickable
 
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.tween
