@@ -6,4 +6,7 @@
     <string name="repetition_alarm_deactivation_dialog_title">Select</string>
     <string name="repetition_alarm_deactivation_dialog_one_time_deactivation">Turn off once on %s</string>
     <string name="repetition_alarm_deactivation_dialog_total_deactivation">Turn off this repeating alarm</string>
+        <!--Alarm Item-->
+    <string name="expanded_alarm_item_additional_settings">Additional settings</string>
+    <string name="expanded_alarm_item_done">Done</string>
 </resources>
