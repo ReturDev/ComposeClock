@@ -18,7 +18,6 @@ import androidx.compose.ui.text.rememberTextMeasurer
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.toSize
 
-private val extraTextWidth = 4.dp
 
 /**
  * A composable function to display a clock time as text with a dynamic size spacer that adjusts based on the text width.
@@ -35,25 +34,19 @@ fun ClockText(
     textStyle: TextStyle = LocalTextStyle.current,
     textMeasurer: TextMeasurer = rememberTextMeasurer()
 ) {
-    // Get the current content color and density from the composition's context
-    val textColor = LocalContentColor.current
+
     val density = LocalDensity.current
 
     // Remember the size of the text with an extra width
     val clockTextSize = remember {
         with(density) {
             // Measure the size of the text using the textMeasurer
-            val size = textMeasurer.measure(
+            textMeasurer.measure(
                 time(),
                 textStyle
             ).size
                 .toSize() // Convert the IntSize to Size
                 .toDpSize() // Convert the Size to DpSize
-
-            // Add extra width to the size
-            size.copy(
-                width = size.width + extraTextWidth
-            )
         }
     }
 
@@ -71,7 +64,6 @@ fun ClockText(
 
                 // Draw the text at the center of the spacer
                 drawText(
-                    color = textColor,
                     textLayoutResult = layoutResult,
                     topLeft = Offset(
                         x = size.width / 2 - (layoutResult.size.width / 2), // Center horizontally
