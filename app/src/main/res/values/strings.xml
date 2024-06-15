@@ -10,4 +10,8 @@
         <!--Alarm Item-->
     <string name="expanded_alarm_item_additional_settings">Additional settings</string>
     <string name="expanded_alarm_item_done">Done</string>
+        <!--AlarmRepetitionUiModel-->
+    <string name="alarm_repetition_one_time">One time</string>
+    <string name="alarm_repetition_daily">Daily</string>
+    <string name="alarm_repetition_monday_to_friday">Monday to friday</string>
 </resources>
