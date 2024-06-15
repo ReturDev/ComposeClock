@@ -2,6 +2,19 @@
     <string name="app_language">en</string>
     <string name="app_name">ComposeClock</string>
     <string name="cancel_button">Cancel</string>
+    <!--Time-->
+    <plurals name="days">
+        <item quantity="one">%d day</item>
+        <item quantity="other">%d days</item>
+    </plurals>
+    <plurals name="hours">
+        <item quantity="one">%d hour</item>
+        <item quantity="other">%d hours</item>
+    </plurals>
+    <plurals name="minutes">
+        <item quantity="one">%d minute</item>
+        <item quantity="other">%d minutes</item>
+    </plurals>
     <!--Alarm-->
         <!--Turn Off Repetition Alarm Dialog-->
     <string name="repetition_alarm_deactivation_dialog_title">Select</string>
@@ -14,4 +27,7 @@
     <string name="alarm_repetition_one_time">One time</string>
     <string name="alarm_repetition_daily">Daily</string>
     <string name="alarm_repetition_monday_to_friday">Monday to friday</string>
+        <!--AlarmUiModel-->
+    <string name="alarm_will_go_off_in_msg">Alarm will go off in %s</string>
+    <string name="alarm_in_minus_of_one_minute">Alarm in less than 1 minute</string>
 </resources>
