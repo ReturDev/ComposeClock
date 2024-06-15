@@ -1,4 +1,5 @@
 <resources>
+    <string name="app_language">en</string>
     <string name="app_name">ComposeClock</string>
     <string name="cancel_button">Cancel</string>
     <!--Alarm-->
