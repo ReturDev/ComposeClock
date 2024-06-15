@@ -5,6 +5,8 @@ import androidx.compose.foundation.layout.RowScope
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.ButtonColors
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
@@ -16,17 +18,19 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 
 /**
- * A composable function to display a long text option button with customizable end content.
+ * A composable function for displaying a button with long text content.
  *
  * @param modifier The modifier to be applied to the component. Default is Modifier.
- * @param text The text to be displayed in the button.
- * @param onClick A callback that is triggered when the button is clicked.
- * @param endContent A composable function for additional content to be displayed at the end of the row. Default is an empty lambda.
+ * @param text The text content of the button.
+ * @param colors The colors to be applied to the button. Default is ButtonDefaults.textButtonColors().
+ * @param onClick The callback to be invoked when the button is clicked.
+ * @param endContent An optional composable lambda to be placed at the end of the button content.
  */
 @Composable
 fun LongTextOptionButton(
     modifier: Modifier = Modifier,
     text: String,
+    colors : ButtonColors = ButtonDefaults.textButtonColors(),
     onClick: () -> Unit,
     endContent: @Composable RowScope.() -> Unit = {}
 ) {
@@ -34,6 +38,7 @@ fun LongTextOptionButton(
         modifier = modifier
             .fillMaxWidth()
             .height(48.dp),
+        colors = colors,
         onClick = onClick,
         shape = RectangleShape
     ) {
